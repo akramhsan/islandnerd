@@ -1,13 +1,13 @@
 {
   "name": "Island Nerd",
   "short_name": "IslandNerd",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#0077B6",
   "icons": [
     {
-      "src": "/images/logo.png",
+      "src": "images/logo.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
