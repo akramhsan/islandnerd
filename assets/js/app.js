@@ -25,6 +25,15 @@
     fetch('/content/posts.json').then(r=>r.json()).then(posts=>{
       const filter = window.ISLAND_FILTER;
       let list = filter ? posts.filter(p=>p.type===filter) : posts;
+      const tagsBar = document.getElementById('tagsBar');
+      renderTagFilters(list, tagsBar, (tag)=>{
+        const base = filter ? posts.filter(p=>p.type===filter) : posts;
+        const q = (document.getElementById('searchInput')?.value||'').toLowerCase().trim();
+        let filtered = base;
+        if (tag && tag !== '*') filtered = filtered.filter(p => (p.tags||[]).includes(tag));
+        if (q) filtered = filtered.filter(p => (p.title + ' ' + (p.tags||[]).join(' ') + ' ' + (p.summary||'')).toLowerCase().includes(q));
+        renderCards(filtered, postsGrid);
+      });
       // Search
       const input = document.getElementById('searchInput');
       if (input) {
@@ -35,6 +44,8 @@
         });
       }
       renderCards(list, postsGrid);
+      const featuredGrid = document.getElementById('featuredGrid');
+      if (featuredGrid){ renderCards((posts.slice(0,3)), featuredGrid); }
     });
   }
 })();
@@ -62,3 +73,28 @@ window.renderCards = function(posts, container){
   `).join('');
   container.innerHTML = html || '<p class="text-muted">No posts yet.</p>';
 };
+
+// --- Tag filter support ---
+function getAllTags(posts){
+  const set = new Set();
+  posts.forEach(p => (p.tags||[]).forEach(t => set.add(t)));
+  return Array.from(set).sort();
+}
+function renderTagFilters(posts, container, onChange){
+  if (!container) return;
+  const tags = getAllTags(posts);
+  if (tags.length === 0){ container.innerHTML = ''; return; }
+  container.innerHTML = ['<span class="small text-muted me-1">Tags:</span>',
+    '<span class="badge rounded-pill text-bg-secondary badge-filter me-1 mb-1" data-tag="*">All</span>',
+    ...tags.map(t => `<span class="badge rounded-pill text-bg-light badge-filter me-1 mb-1" data-tag="${t}">${t}</span>`)
+  ].join(' ');
+  const chips = [...container.querySelectorAll('.badge-filter')];
+  let current = '*';
+  chips[0].classList.add('active');
+  chips.forEach(c => c.addEventListener('click', ()=>{
+    chips.forEach(x=>x.classList.remove('active'));
+    c.classList.add('active');
+    current = c.dataset.tag;
+    onChange(current);
+  }));
+}

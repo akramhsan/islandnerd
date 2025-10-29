@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Island Nerd</title>
+    <link>https://akramhsan.github.io/islandnerd/</link>
+    <description>Guides, reviews, and tutorial videos — Island Nerd.</description>
+    <language>en</language>
+    
+    <item>
+      <title>Set up Google Drive as 'FTP' Storage (Safely)</title>
+      <link>https://akramhsan.github.io/islandnerd/article.html?slug=set-up-google-drive-as-ftp</link>
+      <guid isPermaLink="true">https://akramhsan.github.io/islandnerd/article.html?slug=set-up-google-drive-as-ftp</guid>
+      <pubDate>Wed, 29 Oct 2025 00:00:00 GMT</pubDate>
+      <description>Turn Google Drive into a pseudo‑FTP target using a bridge server with FileZilla and rclone.</description>
+    </item>
+    
+    <item>
+      <title>TP-Link VIGI NVR1008H‑8P Review — Worth It?</title>
+      <link>https://akramhsan.github.io/islandnerd/article.html?slug=vigi-nvr1008h-8p-review</link>
+      <guid isPermaLink="true">https://akramhsan.github.io/islandnerd/article.html?slug=vigi-nvr1008h-8p-review</guid>
+      <pubDate>Wed, 29 Oct 2025 00:00:00 GMT</pubDate>
+      <description>We test the VIGI NVR1008H‑8P in a small office setup and check reliability, PoE power, and app quality.</description>
+    </item>
+    
+    <item>
+      <title>10 Hidden Windows Tips for Faster Daily Work (2025)</title>
+      <link>https://akramhsan.github.io/islandnerd/article.html?slug=windows-hidden-tips-2025</link>
+      <guid isPermaLink="true">https://akramhsan.github.io/islandnerd/article.html?slug=windows-hidden-tips-2025</guid>
+      <pubDate>Wed, 29 Oct 2025 00:00:00 GMT</pubDate>
+      <description>From PowerToys to window snapping tricks — quick wins that save time every day.</description>
+    </item>
+    
+  </channel>
+</rss>
