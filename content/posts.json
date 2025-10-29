@@ -1,0 +1,48 @@
+[
+  {
+    "slug": "set-up-google-drive-as-ftp",
+    "title": "Set up Google Drive as 'FTP' Storage (Safely)",
+    "type": "guide",
+    "tags": [
+      "cloud",
+      "storage",
+      "automation"
+    ],
+    "date": "2025-10-29",
+    "readingTime": "7 min",
+    "summary": "Turn Google Drive into a pseudo\u2011FTP target using a bridge server with FileZilla and rclone.",
+    "thumbnail": "https://placehold.co/800x450/png",
+    "content": "This guide explains the practical ways to receive camera uploads or app exports into Google Drive by bridging with a lightweight server. We\u2019ll use FileZilla Server for inbound FTP and rclone to sync to Drive..."
+  },
+  {
+    "slug": "vigi-nvr1008h-8p-review",
+    "title": "TP-Link VIGI NVR1008H\u20118P Review \u2014 Worth It?",
+    "type": "review",
+    "tags": [
+      "surveillance",
+      "nvr",
+      "tp-link"
+    ],
+    "date": "2025-10-29",
+    "readingTime": "5 min",
+    "summary": "We test the VIGI NVR1008H\u20118P in a small office setup and check reliability, PoE power, and app quality.",
+    "thumbnail": "https://placehold.co/800x450/jpg",
+    "content": "In this hands\u2011on review, we configured 6 PoE cameras and monitored stability for 7 days. Highlights include..."
+  },
+  {
+    "slug": "windows-hidden-tips-2025",
+    "title": "10 Hidden Windows Tips for Faster Daily Work (2025)",
+    "type": "video",
+    "tags": [
+      "windows",
+      "productivity",
+      "shortcuts"
+    ],
+    "date": "2025-10-29",
+    "duration": "8:42",
+    "summary": "From PowerToys to window snapping tricks \u2014 quick wins that save time every day.",
+    "youtubeId": "dQw4w9WgXcQ",
+    "thumbnail": "https://placehold.co/800x450/webp",
+    "content": "Watch the video above for the walkthrough. Key timestamps: 00:45 PowerRename, 02:10 FancyZones..."
+  }
+]
